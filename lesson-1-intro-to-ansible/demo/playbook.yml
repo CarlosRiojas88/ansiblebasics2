@@ -9,3 +9,9 @@
     - name: Output results
       debug:
         msg: "{{ ping_output }}"
+    
+    - name: Ensure /srv/ansible directory exists
+      file:
+        path: /srv/ansible
+        state: directory
+        mode: '0755'
